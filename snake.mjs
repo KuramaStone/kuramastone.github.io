@@ -148,4 +148,9 @@ window.addEventListener('keydown', function(event) {
     else if(event.key == 'ArrowUp') {
         snake.setDirection(3);
     }
+    else if(event.key == ' ') {
+        snake = new Entity(5, 5, 0);
+        moveBerry(); 
+        killed = false;
+    }
 });
