@@ -54,6 +54,9 @@ export class Entity {
     }
 
     setDirection(direction) {
+        if(((direction + 2) % 4) == this.direction) {
+           return;
+        }
         this.direction = direction;
     }
 
