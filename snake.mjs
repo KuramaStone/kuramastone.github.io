@@ -25,7 +25,7 @@ function currentTime() {
 function update() {
     // Update the state of the world for the elapsed time since last render
 
-    if(lastUpdate + 250 < currentMillis()) {
+    if(lastUpdate + 100 < currentMillis()) {
         if(killed) {
             return;
         }
