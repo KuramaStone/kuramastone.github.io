@@ -1,19 +1,374 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Snake Game</title>
-        <style>
-            * {padding: 0; margin: 20; }
-            canvas {background: #eee; display: block; margin: 0 auto; }
-        </style>
-    </head>
-    <body>
-        <div id="containerCanvas">
-            <canvas id="gameCanvas" width="480" height="480" padding:"10"></canvas>
-        </div>
+<!doctype html>
+<!--[if IE 7 ]>
+<html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>
+<html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>
+<html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-gb" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--[if lt IE 9]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+    <title>Brooke's Development</title>
+    <meta name="description" content="">
+    <meta name="author" content="Brooke">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen"/>
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="css/da-slider.css"/>
+    <!-- Owl Carousel Assets -->
+    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <!-- Font Awesome -->
+    <link href="font/css/font-awesome.min.css" rel="stylesheet">
+</head>
 
-        <script type="module" src="snake.mjs"></script> 
-    </body>
+<body>
+<header class="header">
+
+    <div class="container">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#main-nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand scroll-top logo"><b>Brooke</b></a>
+            </div>
+            <!--/.navbar-header-->
+            <div id="main-nav" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav" id="mainNav">
+                    <li class="active"><a href="#home" class="scroll-link">Home</a></li>
+                    <li><a href="#aboutMe" class="scroll-link">About Me</a></li>
+                    <li><a href="#services" class="scroll-link">Services</a></li>
+                    <li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
+                </ul>
+            </div>
+            <!--/.navbar-collapse-->
+        </nav>
+        <!--/.navbar-->
+    </div>
+    <!--/.container-->
+</header>
+<!--/.header-->
+<div id="#top"></div>
+<section id="home">
+    <div class="banner-container">
+        <img src="images/banner-bg.jpg" alt="banner"/>
+        <div class="container banner-content">
+            <div id="da-slider" class="da-slider">
+                <div class="da-slide">
+                    <h2>Personalized Plugins</h2>
+                    <p>Bring your unique vision to life with tailor-made plugins for your Minecraft server.</p>
+                    <div class="da-img"></div>
+                </div>
+                <div class="da-slide">
+                    <h2>Total Customization</h2>
+                    <p>Control every aspect of your server, from gameplay to admin tools, with custom solutions.</p>
+                    <div class="da-img"></div>
+                </div>
+                <div class="da-slide">
+                    <h2>Proven Expertise</h2>
+                    <p>With over 10 years of experience, I deliver reliable and optimized plugins for all your
+                        needs.</p>
+                    <div class="da-img"></div>
+                </div>
+                <div class="da-slide">
+                    <h2>Quick Turnarounds</h2>
+                    <p>Fast and dependable development without compromising on quality.</p>
+                    <div class="da-img"></div>
+                </div>
+                <nav class="da-arrows">
+                    <span class="da-arrows-prev"></span>
+                    <span class="da-arrows-next"></span>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="aboutMe" class="page-section darkBg pDark pdingBtm30">
+    <div class="container">
+        <div class="heading text-center">
+            <h2>About Me</h2>
+            <p>I’m KuramaStone, a developer with a decade of experience in creating custom Minecraft plugins and
+                more.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="images/ref3.png" class="fitImage" alt="img"/>
+                <img src="images/ref4.png" class="fitImage" alt="img"/>
+            </div>
+            <div class="col-md-8">
+                <h3>My Background</h3>
+                <p>With 10+ years in plugin development, I’ve built a strong track record in delivering high-quality,
+                    custom solutions for Minecraft servers. My experience extends beyond the Minecraft community,
+                    allowing me to bring a unique and flexible approach to every project I undertake.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="images/ref6.png" class="fitImage" alt="img"/>
+                <img src="images/ref1.png" class="fitImage" alt="img"/>
+                <img src="images/ref2.png" class="fitImage" alt="img"/>
+                <img src="images/ref5.png" class="fitImage" alt="img"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <h3><i class="fa fa-desktop color"></i>&nbsp; What I Do</h3>
+                <p>I specialize in creating custom gameplay features, total server customization, and performance
+                    optimization. Whether you need unique game modes, automated server management tools, or custom RPG
+                    systems, I can bring your ideas to life.</p>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <h3><i class="fa fa-cloud color"></i>&nbsp;Why Choose Me?</h3>
+                <p>My decade of experience and a proven track record speak for themselves. I prioritize working closely
+                    with clients to ensure their vision is made real while delivering fast and reliable results.</p>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <h3><i class="fa fa-home color"></i>&nbsp;Where to Find Me</h3>
+                <p>Contact me on Discord at @thefirstbrooke or using any of the provided links.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="page-section">
+    <div class="container">
+        <div class="heading text-center">
+            <h2>Services</h2>
+            <p>Explore the wide range of custom plugin development services I offer for Minecraft servers.</p>
+        </div>
+        <div class="row">
+
+            <!-- item -->
+            <div class="col-md-4 text-center">
+                <i class="fa fa-cogs fa-2x circle"></i>
+                <h3><span class="id-color">Core Plugins</span></h3>
+                <p>Factions, Skyblock, Prisons, and your own unique gamemode can all combine however you want.</p>
+            </div>
+            <!-- end: -->
+
+            <!-- item -->
+            <div class="col-md-4 text-center">
+                <i class="fa fa-wrench fa-2x circle"></i>
+                <h3><span class="id-color">Total Customization</span></h3>
+                <p>Gain control over every aspect of your server with fully customizable messages, GUIs, and more.</p>
+            </div>
+            <!-- end: -->
+
+            <!-- item -->
+            <div class="col-md-4 text-center">
+                <i class="fa fa-tachometer fa-2x circle"></i>
+                <h3><span class="id-color">Performance Optimization</span></h3>
+                <p>Ensure smooth server operation with lightweight and efficient plugins designed for performance.</p>
+            </div>
+            <!-- end: -->
+
+            <!-- item -->
+            <div class="col-md-4 text-center">
+                <i class="fa fa-shield fa-2x circle"></i>
+                <h3><span class="id-color">Server Management Tools</span></h3>
+                <p>Streamline server administration with automated moderation, logging tools, and more.</p>
+            </div>
+            <!-- end: -->
+
+            <!-- item -->
+            <div class="col-md-4 text-center">
+                <i class="fa fa-money fa-2x circle"></i>
+                <h3><span class="id-color">Economy & RPG Systems</span></h3>
+                <p>Create custom currencies, leveling systems, and intricate RPG mechanics for your server.</p>
+            </div>
+            <!-- end: -->
+
+            <!-- item -->
+            <div class="col-md-4 text-center">
+                <i class="fa fa-gamepad fa-2x circle"></i>
+                <h3><span class="id-color">Event Plugins</span></h3>
+                <p>Develop plugins for mini-games and server-wide events that keep players engaged.</p>
+            </div>
+            <!-- end: -->
+
+        </div>
+    </div>
+</section>
+<section id="plans" class="page-section">
+    <div class="container">
+        <div class="heading text-center">
+            <!-- Heading -->
+            <h2>Pricing Guide</h2>
+            <p>Choose the perfect plan for your Minecraft server’s needs. Whether you need a simple plugin or a
+                comprehensive system, I’ve got you covered.</p>
+        </div>
+        <div class="row flat">
+            <div class="col-lg-4 col-md-3 col-xs-6">
+                <ul class="plan plan1">
+                    <li class="plan-name">Basic
+                    </li>
+                    <li class="plan-price">
+                        <strong>$14.99</strong> / one-time
+                    </li>
+                    <li>
+                        <strong>
+                            Small Plugins</br>
+                            1-2 Days Delivery</br>
+                            Simple Chat Commands</br>
+                            Redirecting Players</br>
+                            Chat Managers</br>
+                        </strong>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-3 col-xs-6">
+                <ul class="plan plan2 featured">
+                    <li class="plan-name">Standard
+                    </li>
+                    <li class="plan-price">
+                        <strong>$34.99</strong> / one-time
+                    </li>
+                    <li>
+                        <strong>
+                            Medium Plugins</br>
+                            3-7 Days Delivery</br>
+                            Particle Effects</br>
+                            Powerful GUIs & Scoreboards
+                        </strong>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-3 col-xs-6">
+                <ul class="plan plan3">
+                    <li class="plan-name">Advanced
+                    </li>
+                    <li class="plan-price">
+                        <strong>$59.99+</strong> / one-time
+                    </li>
+                    <li>
+                        <strong>
+                            Large Plugins</br>
+                            7+ Days Delivery</br>
+                            Minigames</br>
+                            Skyblock, Factions, Prison Cores</br>
+                        </strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contactUs" class="contact-parlex">
+    <div class="parlex-back">
+        <div class="container">
+
+            <div class="row">
+                <div class="heading text-center">
+                    <!-- Heading -->
+                    <h2>Contact Us</h2>
+                    <p>Reach out via any of the platforms below:</p>
+                </div>
+            </div>
+
+            <div class="row mrgn30">
+
+                <!-- Spigot -->
+                <div class="col-md-3 col-sm-6">
+                    <a href="https://www.spigotmc.org/members/your-spigot-username" target="_blank" class="contact-link">
+                        <div class="contact-icon-container">
+                            <div class="contact-icon-padding">
+                                <img src="images/spigot.png" alt="Spigot" class="contact-icon">
+                            </div>
+                        </div>
+                        <h3>Spigot</h3>
+                    </a>
+                </div>
+
+                <!-- BuiltByBit -->
+                <div class="col-md-3 col-sm-6">
+                    <a href="https://builtbybit.com/members/xthegamercodes.65048/" target="_blank" class="contact-link">
+                        <div class="contact-icon-container">
+                            <div class="contact-icon-padding">
+                                <img src="images/builtbybit.png" alt="BuiltByBit" class="contact-icon">
+                            </div>
+                        </div>
+                        <h3>BuiltByBit</h3>
+                    </a>
+                </div>
+
+                <!-- GitHub -->
+                <div class="col-md-3 col-sm-6">
+                    <a href="https://github.com/KuramaStone" target="_blank" class="contact-link">
+                        <div class="contact-icon-container">
+                            <div class="contact-icon-padding">
+                                <img src="images/github.png" alt="GitHub" class="contact-icon">
+                            </div>
+                        </div>
+                        <h3>GitHub</h3>
+                    </a>
+                </div>
+
+                <!-- Discord -->
+                <div class="col-md-3 col-sm-6">
+                    <a href="https://discord.gg/EPqHPebd" target="_blank" class="contact-link">
+                        <div class="contact-icon-container">
+                            <div class="contact-icon-padding">
+                                <img src="images/discord.png" alt="Discord" class="contact-icon">
+                            </div>
+                        </div>
+                        <h3>Discord</h3>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+        <!--/.container-->
+    </div>
+</section>
+
+
+
+
+<!--/.page-section-->
+<section class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                Copyright 2014 | All Rights Reserved -- Template by <a href="http://webThemez.com">WebThemez.com</a>
+            </div>
+        </div>
+        <!-- / .row -->
+    </div>
+</section>
+<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+
+<!--[if lte IE 8]>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]-->
+<script src="js/modernizr-latest.js"></script>
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/jquery.isotope.min.js" type="text/javascript"></script>
+<script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+<script src="js/jquery.nav.js" type="text/javascript"></script>
+<script src="js/jquery.cslider.js" type="text/javascript"></script>
+<script src="js/custom.js" type="text/javascript"></script>
+<script src="js/owl-carousel/owl.carousel.js"></script>
+
+
+</body>
 </html>
